@@ -1,0 +1,21 @@
+# Simulating an IoT sensor data stream
+class Sensor:
+    def __init__(self, sensor_id):
+        self.sensor_id = sensor_id
+
+    def read_data(self):
+        # Simulate reading data from the sensor
+        return 42.0  # Replace with actual sensor data
+
+# Edge computing function
+def process_sensor_data(sensor):
+    data = sensor.read_data()
+    # Perform some processing (e.g., filtering, aggregation, etc.)
+    processed_data = data * 2
+    return processed_data
+
+# Example usage
+if __name__ == "__main__":
+    sensor1 = Sensor(sensor_id=1)
+    processed_value = process_sensor_data(sensor1)
+    print(f"Processed value: {processed_value}")
